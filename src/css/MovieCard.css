@@ -1,0 +1,94 @@
+/* --- card & poster --- */
+.modern-movie-card {
+  position: relative;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+  transition: transform 0.3s, box-shadow 0.3s;
+  cursor: pointer;
+}
+.modern-movie-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.75);
+}
+.movie-poster-img {
+  width: 100%;
+  display: block;
+  object-fit: cover;
+  aspect-ratio: 2 / 3;
+}
+
+/* --- favorite button --- */
+.favorite-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  z-index: 2;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: none;
+  font-size: 1.4rem;
+  line-height: 1;
+  color: #fff;
+  background: rgba(0, 0, 0, 0.55);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s;
+}
+.favorite-btn:hover {
+  background: rgba(0, 0, 0, 0.85);
+}
+.favorite-btn.active {
+  color: #ff4757;
+}
+
+/* --- blurred info bar --- */
+.movie-info-blur {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 0.6rem 0.8rem;
+  backdrop-filter: blur(6px);
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.7rem;
+}
+.info-text h3 {
+  margin: 0;
+  font-size: 1rem;
+  color: #fff;
+}
+.info-text span {
+  font-size: 0.85rem;
+  color: #ccc;
+}
+.info-rating {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+}
+
+/* optional: shrink rating badge a bit */
+.info-rating .circular-rating {
+  width: 42px;
+  height: 42px;
+}
+
+/* --- responsive tweak --- */
+@media (max-width: 600px) {
+  .movie-info-blur {
+    padding: 0.5rem 0.6rem;
+  }
+  .info-text h3 {
+    font-size: 0.9rem;
+  }
+  .info-rating .circular-rating {
+    width: 36px;
+    height: 36px;
+  }
+}

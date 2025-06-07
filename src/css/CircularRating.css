@@ -1,0 +1,30 @@
+.circular-rating {
+  width: 50px;
+  height: 50px;
+}
+
+.circular-rating svg {
+  transform: rotate(-90deg);
+  width: 100%;
+  height: 100%;
+}
+
+.circular-rating .circle-bg {
+  fill: none;
+  stroke: #444;
+  stroke-width: 3.8;
+}
+
+.circular-rating .circle {
+  fill: none;
+  stroke-width: 3.8;
+  stroke-linecap: round;
+  transition: stroke-dashoffset 0.35s;
+}
+
+.circular-rating .percentage {
+  fill: white;
+  font-size: 0.45em;
+  font-weight: bold;
+  dominant-baseline: middle;
+}
